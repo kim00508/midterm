@@ -450,6 +450,12 @@ footer {
         font-size: 0.8rem;
         padding: 15px 0;
     }
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 

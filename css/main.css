@@ -69,6 +69,15 @@ nav a {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+
+
+.button:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+
 .button:hover,
 .button:focus {
     padding: 6px 16px;
@@ -77,12 +86,19 @@ nav a {
     color: black;
 }
 
+
 .contact-button {
     padding: 6px 16px;
     background-color: rgb(37, 105, 194);
     color: white;
     border-radius: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.5);
 }
 
 .contact-button:hover {
@@ -116,19 +132,6 @@ nav a {
     box-shadow: rgba(255, 255, 255, 0.12) 10px 10px 60px;
 }
 
-
-/* .hero {
-    position: relative;
-    overflow: hidden;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    border-radius: 20px;
-    text-align: left;
-    padding: 20px;
-} */
-
 .text {
     position: absolute;
     bottom: 30px;
@@ -147,14 +150,6 @@ nav a {
     font-size: 1rem;
 }
 
-/* .hero-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-    animation: zoom 3s infinite alternate;
-} */
-
 .image {
     max-width: 100%;
     vertical-align: middle;
@@ -162,7 +157,7 @@ nav a {
 
 .hero-image {
     width: 100%;
-    height: 410px;
+    height: auto;
     display: block;
     object-fit: cover;
     animation: zoom 3s infinite alternate;
@@ -227,13 +222,12 @@ nav a {
     border-radius: 0 0 10px 10px;
 }
 
-
-
 /* Planets Section */
 .planets {
     text-align: center;
     padding: 40px 0;
     background-color: black;
+    
 }
 
 .planets h3 {
@@ -274,11 +268,23 @@ nav a {
     background-color: #305bcf;
     color: #fff;
     border-radius: 20px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
+.planet a:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.planet a:visited {
+    background-color: rgb(121, 23, 121);
+}
+
+
 .planet a:hover {
-    background-color: #661d97;
+    background-color: aquamarine;
 }
 
 /* Footer */
@@ -291,66 +297,6 @@ footer {
     font-weight: bold;
 }
 
-/* @media (max-width: 600px) {
-    .planet-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .planets h3 {
-        text-align: center;
-    }
-
-    .planet {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
-    }
-
-    .planet img {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 10px;
-    }
-
-    .planet a {
-        width: 100px;
-        text-align: center;
-    }
-
-    .text h2 {
-        word-break: break-word; 
-    }
-}
-
-@media (max-width: 900px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-    }
-
-    .hero-text h2 {
-        font-size: 2rem;
-    }
-
-    .planet-grid {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .planet {
-        flex: 1 1 30%; 
-        max-width: 150px;
-    }
-} */
 
 
 /* Tablet (max-width: 900px) */

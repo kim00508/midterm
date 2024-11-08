@@ -24,71 +24,11 @@ h3 {
     text-align: left;
 }
 
-.stripe {
-    position: relative;
-}
-
-.stripe::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 15px;
-    right: 0;
-    bottom: 5px;
-    background: rgb(33, 90, 175);
-    z-index: -1;
-}
-
-.wrapper {
-    border-radius: 50px;
-    overflow: hidden;
-    position: relative;
-}
-
-.hero-image {
-    width: 100%;
-    
-    height: auto;
-    animation: zoom 3s infinite alternate;
-}
-
-@keyframes zoom {
-    from {
-        transform:  scale(1);
-    }
-    to {
-        transform: scale(1.5);
-    }
-}
-
-.text {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    z-index: 5;
-    color: white;
-    z-index: 1;
-}
-
-.text > h2 {
-    margin: 0;
-}
-
-.colorShift {
-    background: -webkit-linear-gradient(0deg, blue, cyan);
-    background-size: 100% 100%;
-    background-position: 0% 0%;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-
-    animation: textScroll 3s infinite alternate;
-
-}
-
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .header-container h1 {
@@ -154,16 +94,40 @@ nav a {
 }
 
 
+.stripe {
+    position: relative;
+}
 
-.hero {
+.stripe::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 15px;
+    right: 0;
+    bottom: 5px;
+    background: rgb(33, 90, 175);
+    z-index: -1;
+}
+
+.wrapper {
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(255, 255, 255, 0.12) 10px 10px 60px;
+}
+
+
+/* .hero {
     position: relative;
     overflow: hidden;
     margin: 20px 0;
     width: 100%;
+    max-width: 1000px;
     height: auto;
     border-radius: 20px;
     text-align: left;
-}
+    padding: 20px;
+} */
 
 .text {
     position: absolute;
@@ -182,6 +146,64 @@ nav a {
 .text p {
     font-size: 1rem;
 }
+
+/* .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    animation: zoom 3s infinite alternate;
+} */
+
+.image {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.hero-image {
+    width: 100%;
+    height: 410px;
+    display: block;
+    object-fit: cover;
+    animation: zoom 3s infinite alternate;
+}
+
+@keyframes zoom {
+    from {
+        transform:  scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+.text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 5;
+    color: white;
+    z-index: 1;
+}
+
+.text > h2 {
+    margin: 0;
+}
+
+.colorShift {
+    background: -webkit-linear-gradient(0deg, blue, cyan);
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    animation: textScroll 3s infinite alternate;
+
+}
+
+
+
+
 
 /* Planets Section */
 .planets {
@@ -213,7 +235,6 @@ nav a {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .planet h4 {
@@ -246,7 +267,7 @@ footer {
     font-weight: bold;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .planet-grid {
         display: flex;
         flex-direction: column;
@@ -283,7 +304,6 @@ footer {
     .header-container {
         flex-direction: column;
         align-items: center;
-        box-shadow: rgba(255, 255, 255, 0.178) 10px 10px 60px;
     }
 
     nav ul {
@@ -306,5 +326,116 @@ footer {
         flex: 1 1 30%; 
         max-width: 150px;
     }
+} */
+
+
+/* Tablet (max-width: 900px) */
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .planet-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .planet {
+        flex: 1 1 30%; /* 태블릿에서는 3개씩 나열 */
+        max-width: 150px;
+    }
 }
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Hero Section - 모바일 버전에서 중앙 정렬 */
+    .hero-text {
+        top: 50%;
+        left: 50%;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-text p,
+    .hero-text .magazine-name {
+        font-size: 0.8rem;
+    }
+
+    /* 행성들을 세로로 나열 */
+    .planet-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planet {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .planet img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .planets h3 {
+        text-align: center;
+    }
+
+    .planet h4 {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+
+    .planet a {
+        padding: 10px 14px;
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+
+    .contact-button {
+        font-size: 1rem;
+        padding: 8px 14px;
+        border-radius: 20px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 15px 0;
+    }
+}
+
+
 

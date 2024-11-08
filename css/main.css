@@ -121,6 +121,22 @@ nav a {
     transition: color 0.3s ease;
 }
 
+.button {
+    padding: 6px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+    padding: 6px 16px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    color: black;
+}
+
 .contact-button {
     padding: 6px 16px;
     background-color: rgb(37, 105, 194);
@@ -134,8 +150,10 @@ nav a {
 }
 
 .contact-button:active {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
+
+
 
 .hero {
     position: relative;
@@ -171,7 +189,7 @@ nav a {
 
 .planet-grid {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 30px;
     flex-wrap: nowrap; 
 }
@@ -182,6 +200,8 @@ nav a {
 }
 
 .planet img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -195,6 +215,7 @@ nav a {
 
 .planet a {
     display: inline-block;
+    width: 100px;
     margin-top: 10px;
     padding: 8px 12px;
     background-color: #305bcf;
@@ -246,19 +267,28 @@ footer {
 }
 
 @media (max-width: 400px) {
-    .container {
-        width: 100%;
-    }
     .planet-grid {
-        display: flex;
-        flex-direction: column; /* 세로로 정렬 */
-        align-items: center;
-        gap: 20px;
-        flex-wrap: nowrap; /* 줄 바꿈 금지 */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
+
     .planet {
-        width: 100% !important; /* 한 줄에 하나씩 */
-        max-width: none !important; /* 너비 제한 제거 */
-        margin: 0 auto !important; /* 가운데 정렬 */
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 10px auto !important;
+    }
+
+    .planet img {
+        width: 100px !important;
+        height: 100px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .planet a {
+        width: 100px !important;
+        text-align: center !important;
     }
 }
+
+   

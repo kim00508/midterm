@@ -47,7 +47,7 @@ h3 {
 
 .hero-image {
     width: 100%;
-    display: block;
+    
     height: auto;
     animation: zoom 3s infinite alternate;
 }
@@ -165,6 +165,14 @@ nav a {
     text-align: left;
 }
 
+.text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    z-index: 1;
+}
+
 .text h2{
     font-size: 2.5rem;
     font-weight: bold;
@@ -245,6 +253,10 @@ footer {
         align-items: center;
     }
 
+    .planets h3 {
+        text-align: center;
+    }
+
     .planet {
         width: 100%;
         max-width: 300px;
@@ -260,6 +272,10 @@ footer {
     .planet a {
         width: 100px;
         text-align: center;
+    }
+
+    .text h2 {
+        word-break: break-word; 
     }
 }
 

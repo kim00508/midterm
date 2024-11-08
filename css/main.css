@@ -202,6 +202,30 @@ nav a {
 }
 
 
+/* skip links */
+.skip-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.skip-links a {
+    position: absolute;
+    top: -3em;
+    background-color: white;
+    color: black;
+    padding: .5em 1em;
+    font-weight: bold;
+    border-top: none;
+    z-index: 10;
+    transition: transform 1s ease, top 1s ease;
+}
+
+.skip-links a:focus {
+    top: 0em;
+    border-radius: 0 0 10px 10px;
+}
 
 
 

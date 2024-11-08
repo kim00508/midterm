@@ -11,9 +11,17 @@
 </head>
 
 <body>
+
+    <div role="navigation">
+        <ul class="skip-links">
+            <li><a href=#nav>Skip to nav</a></li>
+            <li><a href="#main">Skip to main content</a></li>
+        </ul>
+    </div>
+
     <header class="header-container container">
         <h1>The <span class="stripe">System</span></h1>
-        <nav>
+        <nav id="nav">
             <ul>
                 <li><a href="#" class="button">Planets</a></li>
                 <li><a href="#" class="button">Interstellar</a></li>
@@ -35,13 +43,11 @@
                 </div>
                 <div class="image">
                     <img src="images/milky-way.jpg" alt="Milky Way" class="hero-image">
-                </div>
-                
-            </div>
-            
+                </div>  
+            </div>  
         </section>
 
-        <section class="planets">
+        <section id="main" class="planets">
             <h3>Meet the Locals</h3>
             <div class="planet-grid">
                 <div class="planet">

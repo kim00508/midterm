@@ -366,7 +366,6 @@ footer {
     }
 
     .planet {
-        /* flex: 1 1 30%; 태블릿에서는 3개씩 나열 */
         max-width: 150px;
     }
 }
@@ -389,8 +388,6 @@ footer {
         gap: 15px;
     }
 
-    
-    /* Hero Section - 모바일 버전에서 중앙 정렬 */
 
     .hero-text {
         top: 50%;
@@ -408,7 +405,7 @@ footer {
         font-size: 0.8rem;
     }
 
-    /* 행성들을 세로로 나열 */
+
     .planet-grid {
         display: flex;
         flex-direction: column;

@@ -314,6 +314,14 @@ footer {
         margin-top: 10px;
     }
 
+    .wrapper {
+        border-radius: 0;
+    }
+
+    .hero-image {
+        animation: none;
+    }
+
     .hero-text h2 {
         font-size: 2rem;
     }
@@ -322,9 +330,43 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+    
+    .planet-one {
+        grid-area: p1
+    }
+
+    .planet-two {
+        grid-area: p2
+    }
+
+    .planet-three {
+        grid-area: p3
+    }
+
+    .planet-four {
+        grid-area: p4
+    }
+
+    .planet-five {
+        grid-area: p5
+    }
+
+    .planet-six {
+        grid-area: p6
+    }
+
+    .planet-grid {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+        grid-template-areas:
+        "p1 p2 p3"
+        "p4 p5 p6"
+    }
 
     .planet {
-        flex: 1 1 30%; /* 태블릿에서는 3개씩 나열 */
+        /* flex: 1 1 30%; 태블릿에서는 3개씩 나열 */
         max-width: 150px;
     }
 }
@@ -349,6 +391,7 @@ footer {
 
     
     /* Hero Section - 모바일 버전에서 중앙 정렬 */
+
     .hero-text {
         top: 50%;
         left: 50%;

@@ -238,10 +238,36 @@ footer {
     font-weight: bold;
 }
 
+@media (max-width: 600px) {
+    .planet-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planet {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .planet img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .planet a {
+        width: 100px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 900px) {
     .header-container {
         flex-direction: column;
         align-items: center;
+        box-shadow: rgba(255, 255, 255, 0.178) 10px 10px 60px;
     }
 
     nav ul {
@@ -261,32 +287,8 @@ footer {
     }
 
     .planet {
-        flex: 1 1 30%; /* 태블릿에서는 3개씩 나열 */
+        flex: 1 1 30%; 
         max-width: 150px;
     }
 }
 
-@media (max-width: 600px) {
-    .planet-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .planet {
-        width: 100% !important;
-        max-width: 300px !important;
-        margin: 10px auto !important;
-    }
-
-    .planet img {
-        width: 100px !important;
-        height: 100px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .planet a {
-        width: 100px !important;
-        text-align: center !important;
-    }
-}
